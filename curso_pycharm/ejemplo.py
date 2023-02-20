@@ -1,0 +1,1 @@
+print("Hola mundo, esto es Python desde PyCharm");
