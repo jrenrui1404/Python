@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 
+import tk as tk
+
 base_window = Tk() #creamos la ventana principal
 
 base_window.title('Formulario Python') #añadimos un título
@@ -62,6 +64,28 @@ caja_edad.place(x=282, y=42)
 caja_nombre = Entry (main_frame, width=12,font=fuente_etiquetas)
 caja_nombre.place(x=20, y=42)
 
+# campo de selección de vehiculo
+label_vehiculo = Label(main_frame, text='Vehículo', font=fuente_etiquetas, justify=LEFT)
+label_vehiculo.place(x=60, y=170)
+var_vehiculo = StringVar()
+var_vehiculo.set('hombre')
+checkbox_coche = Radiobutton(main_frame, text='Coche', variable=var_vehiculo, value='coche')
+checkbox_coche.place(x=20, y=205)
+checkbox_moto = Radiobutton(main_frame, text='Moto', variable=var_vehiculo, value='moto')
+checkbox_moto.place(x=100, y=205)
+
+# campo de selección de intereses
+label_intereses = Label(main_frame, text='Intereses', font=fuente_etiquetas, justify=LEFT)
+label_intereses.place(x=220, y=120)
+var_futbol = BooleanVar()
+var_futbol.set(False)
+checkbox_futbol = Checkbutton(main_frame, text='Fútbol', variable=var_futbol)
+checkbox_futbol.place(x=220, y=150)
+var_musica = BooleanVar()
+var_musica.set(False)
+checkbox_musica = Checkbutton(main_frame, text='Música', variable=var_musica)
+checkbox_musica.place(x=218, y=180)
+
 
 #definimos la funcion para el botón
 def get_msm():
@@ -75,18 +99,15 @@ def get_msm():
     if sexo == 'hombre':
         cadena = nombre + ' es un ' + sexo + ' le gusta ' + asig + ' y tiene ' + edad + ' años.'
         label_msm = ttk.Label(main_frame, text=cadena)
-        label_msm.place(x=30,y=220)
+        label_msm.place(x=40,y=240)
     else:
-        cadena = 'Eres una ' + sexo + ' de una edad ' + edad
+        cadena = nombre + ' es una ' + sexo + ' le gusta ' + asig + ' y tiene ' + edad + ' años.'
         label_msm = ttk.Label(main_frame, text=cadena)
-        label_msm.place(x=80,y=220)
+        label_msm.place(x=40,y=240)
     
         
 #ponemos un boton de calculo
 boton = Button (main_frame, text='Enviar', font=fuente_etiquetas, command=get_msm)
-boton.place(x=150, y=250)
-
-
+boton.place(x=150, y=270)
 
 base_window.mainloop() #hace que la app se quede esperando hasta que la cerremos con la x
-
