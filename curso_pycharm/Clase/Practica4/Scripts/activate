@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\tarde\Downloads\Python3"
+VIRTUAL_ENV="C:\Users\chema\Desktop\Python4"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -55,9 +55,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(Python3) ${PS1:-}"
+    PS1="(Python4) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(Python3) "
+    VIRTUAL_ENV_PROMPT="(Python4) "
     export VIRTUAL_ENV_PROMPT
 fi
 

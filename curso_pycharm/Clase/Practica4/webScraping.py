@@ -8,12 +8,13 @@ from time import sleep
 
 #importamos el archivo de la copia
 import copiaSeguridadSemanal
+import webScraping2
 
 def tarea():
     print('Ejecutando la tarea', datetime.now())
 
 def tarea2():
-    print('EHHHHHH AHHHHH 2', datetime.now())
+    print('Ejecutando la tarea 2', datetime.now())
     
 #ejecutamos una tarea cada 5 segundos
 schedule.every(3).seconds.do(tarea)
@@ -23,6 +24,9 @@ schedule.every(6).seconds.do(tarea2)
 
 #ejecutamos la copia de seguridad de forma semanal
 tarea_copia = schedule.every().saturday.do(copiaSeguridadSemanal.copiaSeguridadSemanal)
+#prueba
+#tarea_resultados = schedule.every().second.do(webScraping2.resultados)
+tarea_resultados = schedule.every().day.do(webScraping2.resultados)
 
 #le digo que este siempre ejecutando las tareas
 while True:

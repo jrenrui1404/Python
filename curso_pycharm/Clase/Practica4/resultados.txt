@@ -1,0 +1,7 @@
+Euro: 0.939496
+British: 0.831032
+Australian Dollar:82.050777
+Indian Rupee:1.518631
+Canadian Dollar: 1.384126
+Singapore Dollar: 1.349821
+...
